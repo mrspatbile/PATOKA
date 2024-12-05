@@ -19,7 +19,7 @@ interface IERC20 {
 }
 
 
-contract PATOKAToken is IERC20
+contract ERC20Token is IERC20
 {
     string public name;
     string public symbol;
@@ -32,12 +32,12 @@ contract PATOKAToken is IERC20
 
 
     constructor(string memory _name, string memory _symbol, uint256 _initialSupply)
-{
-    name = _name;
-    symbol = _symbol;
-    decimals = 18;
-    totalSupply = _initialSupply *  * 10 ** 18; // 1 million tokens with 18 decimals
-    balanceOf[msg.sender] = totalSupply; // Assign all tokens to the deployer
+    {
+        name = _name;
+        symbol = _symbol;
+        decimals = 18;
+        totalSupply = _initialSupply *  * 10 ** 18; // 1 million tokens with 18 decimals
+        balanceOf[msg.sender] = totalSupply; // Assign all tokens to the deployer
     }
 
 
