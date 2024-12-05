@@ -31,12 +31,13 @@ contract PATOKAToken is IERC20
     mapping(address => mapping(address => uint256)) public allowance;
 
 
-    constructor() {
-        name = "PATOKA"; // Token name
-        symbol = "PTKA"; // Token symbol
-        decimals = 18;   // Standard for ERC20 tokens
-        totalSupply = 1000000 * 10 ** 18; // 1 million tokens with 18 decimals
-        balanceOf[msg.sender] = totalSupply; // Assign all tokens to the deployer
+    constructor(string memory _name, string memory _symbol, uint256 _initialSupply)
+{
+    name = _name;
+    symbol = _symbol;
+    decimals = 18;
+    totalSupply = _initialSupply *  * 10 ** 18; // 1 million tokens with 18 decimals
+    balanceOf[msg.sender] = totalSupply; // Assign all tokens to the deployer
     }
 
 
