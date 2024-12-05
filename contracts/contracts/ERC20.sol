@@ -36,7 +36,7 @@ contract ERC20Token is IERC20
         name = _name;
         symbol = _symbol;
         decimals = 18;
-        totalSupply = _initialSupply *  * 10 ** 18; // 1 million tokens with 18 decimals
+        totalSupply = _initialSupply * 10 ** 18; // 1 million tokens with 18 decimals
         balanceOf[msg.sender] = totalSupply; // Assign all tokens to the deployer
     }
 
